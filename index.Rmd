@@ -19,11 +19,8 @@ italy_region <- read.csv("https://raw.githubusercontent.com/RamiKrispin/covid19I
 italy_region$date <- as.Date(italy_region$date)
 
 
-
 italy_total <- read.csv("https://raw.githubusercontent.com/RamiKrispin/covid19Italy/master/csv/italy_total.csv", stringsAsFactors = FALSE)
 italy_total$date <- as.Date(italy_total$date)
-
-
 
 
 #------------------ Parameters ------------------
@@ -151,9 +148,6 @@ df_trajectory <- df_china %>%
   dplyr::left_join(df_sk, by = "index") %>%
   dplyr::left_join(df_us, by = "index") %>%
   dplyr::left_join(df_spain, by = "index")
-
-
-
 
 
 
